@@ -13,4 +13,5 @@
     <string name="right"><![CDATA[>]]></string>
     <string name="down">v</string>
     <string name="send">Send</string>
+    <string name="console"><![CDATA[>_]]></string>
 </resources>
