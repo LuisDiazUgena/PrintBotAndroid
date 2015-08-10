@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/LytBluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/BtnConnect"
+            android:text="@string/Connect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btnDisconnect"
+            android:text="@string/disconnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LytModesConsole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LytBluetooth"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="30dp">
+
+        <LinearLayout
+            android:id="@+id/LytModes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LytBluetooth"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/BtnLight"
+                android:text="@string/light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/BtnObstacles"
+                android:text="@string/obstacles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/BtnLines"
+                android:text="@string/lines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:src="@android:drawable/alert_dark_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/BtnUp"
+        android:text="@string/up"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/LytModesConsole"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
+    <LinearLayout
+        android:id="@+id/LytBtnCentral"
+        android:layout_below="@+id/BtnUp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/BtnLeft"
+            android:text="@string/left"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/LytModesConsole"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+        <Button
+            android:id="@+id/BtnCenter"
+            android:text="@string/Center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/LytModesConsole"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+        <Button
+            android:id="@+id/BtnRight"
+            android:text="@string/right"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/LytModesConsole"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/BtnDown"
+        android:text="@string/down"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/LytBtnCentral"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/BtnDown">
+
+    <EditText
+        android:id="@+id/UserInput"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/BtnSend"
+        android:text="@string/send"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"/>
+</LinearLayout>
+
+
+
+</RelativeLayout>

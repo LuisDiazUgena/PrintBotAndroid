@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">PrintBot Android</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="Connect">Connect BT</string>
+    <string name="disconnect">Disconnect BT</string>
+    <string name="obstacles">Obstacles</string>
+    <string name="light">Light</string>
+    <string name="lines">Line</string>
+    <string name="up">^</string>
+    <string name="left"><![CDATA[<]]></string>
+    <string name="Center">0</string>
+    <string name="right"><![CDATA[>]]></string>
+    <string name="down">v</string>
+    <string name="send">Send</string>
+</resources>
