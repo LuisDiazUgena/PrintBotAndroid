@@ -2,16 +2,48 @@ package com.luisdiaz.printbotandroid;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    private Button btnConnect;
+    private Button btnDisconnect;
+    private Button btnLight;
+    private Button btnObstacles;
+    private Button btnLines;
+    private Button btnUp;
+    private Button btnDown;
+    private Button btnLeft;
+    private Button btnCenter;
+    private Button btnRight;
+    private Button btnSend;
+    private EditText userInput;
+    private TextView consoleText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btnSend = (Button) findViewById(R.id.BtnSend);
+
+        userInput = (EditText) findViewById(R.id.UserInput);
+        consoleText = (TextView)findViewById(R.id.ConsoleText);
+
+        btnSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                consoleText.setText(userInput.getText().toString() + "\n>_");
+            }
+        });
+
     }
 
     @Override
@@ -34,5 +66,9 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void showToast(String txt){
+        
     }
 }
